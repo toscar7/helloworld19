@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage{'build'}{
       steps {
-      steps echo "build steps"
-      sleep 10
+       echo "build steps"
+       sleep 10
       }
     }
    }
