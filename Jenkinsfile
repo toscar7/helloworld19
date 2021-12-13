@@ -4,7 +4,7 @@ pipeline {
       maven 'M2_HOME'
    }
    environment {
-    registry = "docker_hub_account/repository_name"
+    registry = "toscar7/devops-docker"
     registryCredential = 'dockerhub'
    }
    stages {
