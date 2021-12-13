@@ -3,6 +3,10 @@ pipeline {
    tools {
       maven 'M2_HOME'
    }
+   environment {
+    registry = "docker_hub_account/repository_name"
+    registryCredential = 'dockerhub'
+   }
    stages {
      stage('build'){
        steps {
