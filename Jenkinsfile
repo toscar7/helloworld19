@@ -5,7 +5,7 @@ pipeline {
    }
    environment {
     registry = "toscar7/devops-docker"
-    registryCredential = 'dockerhub'
+    registryCredential = 'tomcatID'
    }
    stages {
      stage('build'){
@@ -29,8 +29,8 @@ pipeline {
     }
     stage('docker'){
       steps {
-       echo "image steps"
-       sleep 10
+       script {
+       docker.build registry + ":$BUILD_NUMBER"
       }
      }
    }
